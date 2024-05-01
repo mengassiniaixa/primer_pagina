@@ -67,7 +67,7 @@ body{
             align-items: center;
             .item{
                 margin-right: 35px;
-                .navegadorItem{
+                .linkNav{
                     text-decoration: none;
                     font-weight: 1000;
                     padding: 0.5rem 1rem;
@@ -78,8 +78,9 @@ body{
                         border-radius: 0.5rem;
                     }
                 }
-                .navegadorItem.btnLogin{
+                .linkNav.btnLogin{
                     background-color: #181419;
+                    text-decoration: none;
                     color: white;
                     border-radius: 0.5rem;
                     transition: transform 0.3s, box-shadow 0.3s;
@@ -118,11 +119,14 @@ hr{
 
             .navegadorLista{
                 padding: initial;
-                .navegadorItem{
-                    font-weight: 400;
-                    margin-right: initial;
-                    font-size: 1rem;
-                    padding: 0.2rem;
+                .item{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                    }
+                    
                 } 
             }
 
@@ -362,21 +366,22 @@ hr{
 
 @media(max-width: 768px) {
     .main{
-        .sectionPrincipal{
+        .primerSection{
             height: 60vh;
             .tituloPrincipal{
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             .segundoTitulo{
                 font-size: 2rem;
             }
             .btnRegistrarse{
-                padding: 2rem 1rem;
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
             }
             .buscador{
                 height: 30vh;
                 .tituloSection{
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
                 .buscadorPeliculas{
                     .inputBuscar{
@@ -499,6 +504,8 @@ hr{
     }
 }
 
+
+
 /*---------------REGISTER-----------------*/
 
 
@@ -593,12 +600,55 @@ hr{
 
 /*register para celu*/
 
-@media(max-width: 1200px){
+@media (max-width: 1200px){
+    .bodyRegister{
+        .headerRegister{
+            padding: 20px;
+            .anclaLogo{
+                font-size: 1rem;
+            }
+        }
+        .mainRegister{
+            .sectionRegister{
+                width: 95%;
+                padding: 10px 10px;
+                .tituloRegister{
+                    font-size: 2rem;
+                }
+                form{
+                    width: 100%;
+                    text-align: center;
 
-}
+                    input:not(.check,.boton),select{
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
 
+                    }
+                    .terminosYCondiciones{
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 1rem;
+                    }
+                    .boton{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+                    .help{
+                        text-align: left;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+} 
 /*--------------LOGIN------------------*/
 /*login para escritorio*/
+
 .bodyLogin{
     height: 100vh;
     background: linear-gradient(to right top, #24242473, #24242473), url(../img/bg-register.jpg);
@@ -666,7 +716,207 @@ hr{
 
     }
 
+}
+
+/*login para el celu*/
+@media (max-width: 1200px){
+    .bodyLogin{
+        .headerLogin{
+            padding: 20px;
+            .anclaLogo{
+                font-size: 1rem;
+            }
+        }
+        .mainLogin{
+            width: 95%;
+            .sectionLogin{
+                width: 95%;
+                padding: 10px 10px;
+                .tituloLogin{
+                    font-size: 2rem;
+                }
+                .loginForm{
+                    width: 100%;
+                    text-align: center;
+                    input:not(.boton),select{
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+    /*------------------DETALLE--------------*/
+
+    .mainDetalle{
     
+        .detalle{
+            padding-top: 50px;
+            background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url(../img/marioDetalle.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
 
+            .contenedorDetalle{
+                width: 75%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 85px;
 
+                img{
+                    border-radius: 0.5rem;
+                }
+                 .textoDetalle{
+                        
+                     h1{
+                          font-size: 2rem;
+                          font-weight: 600;
+                    }
+                        
+                    h2{
+                         margin-top: 20px;
+                    }
+
+                    .contenedorCredito{
+                         margin-top: 20px;
+
+                    }
+                 }
+
+            }
+        }
+
+        .trailer{
+            padding-top: 150px;
+            padding-bottom: 100px;
+            width: 75%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 70px;
+            
+            .contenedorInfo{
+                
+                .redes{
+                    margin-bottom: 20px;
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        column-gap: 20px;
+                        li{
+                            a{
+                                text-decoration: none;
+                                font-size: 2rem;
+                                margin-right: 50px;
+
+                            }
+                        }
+                    }
+                }
+
+                .info{
+                    table{
+                        width: 100%;
+                        tr{
+                            td{
+                                font-size: 1rem;
+                                padding: 10px 0px;
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    /*ESTILOS PARA MOBILE*/
+    @media screen and (max-width:1200px){
+        .mainDetalle{
+            .detalle{
+                height: initial;
+                .contenedorDetalle{
+                    flex-direction: column;
+                    row-gap: 20px;
+                    img{
+                        width: 100%;
+                        height: 300px;
+                    }
+                    .textoDetalle{
+                        h1{
+                            font-size: 1.5rem;
+                        }
+                        h2{
+                            font-size: 1rem;
+                        }
+                        .contenedorCreditos{
+                            flex-direction: column;
+                            row-gap: 10px;
+                        }
+                    }
+                }
+            }
+            .trailer{
+                width: 95%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                flex-direction: column;
+                row-gap: 20px;
+                .contenedorTrailer{
+                    width: 100%;
+                    h2{
+                        margin-bottom: 20px;
+                    }
+                    iframe{
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+                .contenedorInfo{
+                    width: 100px;
+                    .redes{
+                        width: 100%;
+                        ul{
+                            width: 100px;
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            li{
+                                a{
+                                    font-size: 2rem;
+                                    margin-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .info{
+                        table{
+                            try{
+                                td{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+hr{
+    border: 1px solid #9f3647;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
 }

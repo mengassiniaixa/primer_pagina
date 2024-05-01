@@ -22,20 +22,20 @@
             </a>
         <ul class="navegadorLista">
             <li class="item">
-                <a class="navegadorItem" href="#tendencias">Tendencias</a>
+                <a class="linkNav" href="./index.html#tendencias">Tendencias</a>
             </li>
             <li class="item">
-                <a class="navegadorItem" href="register.html">Registrarse</a>
+                <a class="linkNav" href="./register.html">Registrarse</a>
             </li>
             <li class="item">
-                <a class="navegadorItem btnLogin" href="login.html">Iniciar Sesión</a>
+                <a class="linkNav btnLogin" href="./login.html">Iniciar Sesión</a>
             </li>
         </ul>
         </nav>
     </header>
     
     <main class="mainDetalle">
-        <section class="detalle" >
+        <section class="detalle" data-aos="zoom-in"  data-aos-duration="1000" >
             <div class="contenedorDetalle">
                 <div class="imgDetalle">
                     <img src="../img/marioDetalle.jpg" alt="pelicula de mario 2023">
@@ -65,7 +65,9 @@
             </div>
         </section>
 
-        <section class="trailer"  >
+        <hr>
+
+        <section class="trailer" data-aos="fade-up"  data-aos-duration="1000" >
             <div class="contenedorTrailer">
                 <h2>Ver trailer</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RjNcTBXTk4I?si=7fnK8NtlxetW0d1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
@@ -136,5 +138,9 @@
             <img src="img/flecha-hacia-arriba.png" alt="ir hacia arriba">
         </a>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
