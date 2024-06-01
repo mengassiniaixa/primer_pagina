@@ -34,15 +34,12 @@
     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-
-/*---------------INDEX-----------------*/
-
 body{
     background-color: #181419;
 
 }
 
-/* header de escritorio*/
+/*HEADER VISTA DESDE ESCRITORIO*/
 .header{
     background-color: #9f3647;
     position: sticky;
@@ -102,7 +99,7 @@ hr{
 }
 
 
-/*header de tablet/celu */
+/*HEADER VISTA DESDE TABLET / CELULAR */
 @media(max-width: 768px){
     .header{
         height: initial;
@@ -135,7 +132,7 @@ hr{
     }
 }
 
-/* main de escritorio*/
+/*MAIN VISTA DESDE ESCRITORIO*/
 
 .main{
     .primerSection{
@@ -186,7 +183,6 @@ hr{
         .tituloSection{
             font-size: 2rem;
             font-weight: 800;
-            /*margin-bottom: 1rem;*/
         }
 
         .buscadorPeliculas{
@@ -239,7 +235,7 @@ hr{
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 60px;/*es el espacio entre las peliculas*/
+            gap: 60px;
             a{
                 text-decoration: none;
                 .pelicula{
@@ -279,7 +275,7 @@ hr{
                         box-shadow: 0 0 30px #9f3647;
                         transform: scale(1.1);
                         .imgTendencias {
-                            filter: blur(5px); /* Aplicar el filtro de desenfoque */
+                            filter: blur(5px);
                         }
                     }
                     &:hover h4{
@@ -297,7 +293,7 @@ hr{
                 }
             }
         } 
-        .btnTendencias{
+        .btnAnterior, .btnSiguiente{
             background-color: #9f3647;
                 display: inline-block;
                 height: 50px;
@@ -316,6 +312,8 @@ hr{
                 }
         }
     }
+
+    
 
     .aclamadas{
             width: 80%; 
@@ -362,7 +360,7 @@ hr{
 
 }
 
-/*main de tablet/celu*/
+/*HEADER VISTA DESDE TABLET / CELULAR*/
 
 @media(max-width: 768px) {
     .main{
@@ -423,7 +421,7 @@ hr{
                         transform: scale(0.9);
                     }
                 }
-                .btnTendencias{
+                .boton{
                     padding: 0.8rem 0.8rem;
                     font-size: 0.8rem;
                 }
@@ -449,7 +447,7 @@ hr{
     }
 }
 
-/*footer de escritorio*/
+/*FOOTER VISTA DESDE ESCRITORIO*/
 .footer{
     background-color: #9f3647;
     height: 15vh;
@@ -483,7 +481,8 @@ hr{
 }
 
 
-/*footer de celular/tablet*/
+/*HEADER VISTA DESDE TABLET / CELULAR */
+
 @media(max-width: 768px) {
     .footer{
         height: initial;
@@ -504,10 +503,7 @@ hr{
     }
 }
 
-
-
-/*---------------REGISTER-----------------*/
-
+/*REGISTER VISTA DESDE ESCRITORIO*/
 
 .bodyRegister{
     height: 100vh;
@@ -598,7 +594,7 @@ hr{
     }
 }
 
-/*register para celu*/
+/*REGISTER VISTA DESDE TABLET / CELULAR*/
 
 @media (max-width: 1200px){
     .bodyRegister{
@@ -646,8 +642,8 @@ hr{
         }
     }
 } 
-/*--------------LOGIN------------------*/
-/*login para escritorio*/
+
+/*LOGIN VISTA DESDE ESCRITORIO*/
 
 .bodyLogin{
     height: 100vh;
@@ -718,7 +714,8 @@ hr{
 
 }
 
-/*login para el celu*/
+/*LOGIN VISTA DESDE TABLET / CELULAR*/
+
 @media (max-width: 1200px){
     .bodyLogin{
         .headerLogin{
@@ -749,9 +746,7 @@ hr{
     }
 }
 
-
-
-    /*------------------DETALLE--------------*/
+/*DETALLE VISTA DESDE ESCRITORIO*/
 
     .mainDetalle{
     
@@ -841,7 +836,8 @@ hr{
 
     }
 
-    /*ESTILOS PARA MOBILE*/
+/*DETALLE VISTA DESDE ESCRITORIO*/
+
     @media screen and (max-width:1200px){
         .mainDetalle{
             .detalle{

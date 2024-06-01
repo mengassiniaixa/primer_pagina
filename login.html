@@ -19,11 +19,9 @@
        
     </header>
     <main class="mainLogin" data-aos="zoom-in"  data-aos-duration="1000" class="seccionRegistrarse">
-        <form action="get">
+        <form id="loginForm" class="loginForm" action="" method="post">
             <h2 class="tituloLogin">Iniciar Sesión</h2>
-
             <section class="sectionLogin">
-                <form class="loginForm" action="" method="post">
                     <div>
                         <input type="email" placeholder="Email..." required id="email" name="email">
                     </div>
@@ -39,10 +37,7 @@
                     <div>
                         <a id="help" class="help" href="register.html">Registrarse</a>
                     </div>
-                </form>
-                
             </section>
-            
         </form>
         
 
@@ -52,5 +47,8 @@
     AOS.init();
     </script>
     
+    
+    <script src="scriptLogin.js"></script>
+
 </body>
 </html>
