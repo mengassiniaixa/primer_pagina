@@ -45,15 +45,16 @@ body{
     position: sticky;
     .nav{
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        margin-left: 50px;
-        margin-right: 50xp;
-        padding: 2.2rem;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
         .logo{
-            font-weight: 1000;
-            font-size: 1.5rem;
             text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
             &:hover{
                 animation: tilt-n-move-shaking 0.25s infinite;
             }
@@ -63,24 +64,25 @@ body{
             display:flex;
             align-items: center;
             .item{
-                margin-right: 35px;
+                margin-right: 20px;
                 .linkNav{
                     text-decoration: none;
-                    font-weight: 1000;
+                    color:#ffffff;
+                    font-weight: 700;
+                    font-size: 1.1rem;
                     padding: 0.5rem 1rem;
                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover{
                         transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                        border-radius: 0.5rem;
+                        border-radius: 5px;
                     }
                 }
                 .linkNav.btnLogin{
                     background-color: #181419;
-                    text-decoration: none;
                     color: white;
-                    border-radius: 0.5rem;
-                    transition: transform 0.3s, box-shadow 0.3s;
+                    border-radius: 5px;
+                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover{
                         transform: scale(0.95);
                         background-color: #9f3647;
@@ -99,19 +101,19 @@ hr{
 }
 
 
-/*HEADER VISTA DESDE TABLET / CELULAR */
+/*HEADER VISTA MOBILE RESPONSIVE */
+
 @media(max-width: 768px){
     .header{
         height: initial;
         .nav{
-
-            margin-left: 10px;
+            margin-left:10px;
             margin-right: 10px;
             flex-direction: column;
             row-gap: 20px;
             .logo{
                 font-size: 1.2rem;
-                font-weight: 700;
+                font-weight:700;
             }
 
             .navegadorLista{
@@ -132,57 +134,60 @@ hr{
     }
 }
 
-/*MAIN VISTA DESDE ESCRITORIO*/
+/*ESTILOS PARA MAIN ESCRITORIO*/
 
 .main{
     .primerSection{
+        color:white;
         background:linear-gradient(to right top, #0000008a, #0000008a), url(../img/backgroundMovieCAC.jpg);
         background-size: cover;
         background-position: center;
-        display: flex;
         height: 90vh;
-        text-align: center;
-        align-items: center;
+        display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         .tituloPrincipal{
             font-size: 4rem;
             font-weight: 700;
-            margin-bottom: 0.2rem;
+            margin-bottom: 1rem;
         }
         .segundoTitulo{
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 400;
-            margin-bottom: 0.2rem;
+            margin-bottom: 1rem;
         }
         .btnRegistrarse{
-            background-color: #9f3647;
+            background-color:#9f3647;
+            color: #ffffff;
             padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-size: 1.3rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
             font-weight: 700;
-            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+             transition: transform 0.3s, box-shadow 0.3s;
             &:hover{
+                background-color: #9f3647;
                 transform: scale(0.95);
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-                border-radius: 0.5rem;
             }
         }
     }
 
     .buscador{
         background-color: #181419;
-        display: flex;
+        color:rgb(255, 255, 255);
         height: 50vh;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
         align-items: center;
 
         .tituloSection{
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
         .buscadorPeliculas{
@@ -191,8 +196,9 @@ hr{
             align-items: center;
             margin-top: 1rem;
             .inputBuscar{
-                border: 2px solid;
+                border: 2px solid white;
                 border-radius: 25px;
+                color: #000000;
                 font-size: 1.2rem;
                 height: 50px;
                 margin: 20px 0px;
@@ -227,7 +233,7 @@ hr{
         text-align: center;
         margin-top: 10px;
         .tituloSection{
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 40px;
         }
@@ -235,22 +241,22 @@ hr{
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 60px;
+            gap:60px;
             a{
                 text-decoration: none;
                 .pelicula{
-                    width: 200px;
+                    width:200px;
                     height: 300px;
                     position: relative;
                     overflow: hidden;
-                    border-radius: 0.5rem;
-                    transition:  all 0.5s ease;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
 
                     .imgTendencias{
-                        border-radius: 10px;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        border-radius: 10px;
                     }
 
                     .tituloPelicula{
@@ -259,11 +265,12 @@ hr{
                         text-align: center;
                         top: 50%;
                         left: 50%;
-                        max-width: 100%;
+                        max-width: 20rem;
+                        width: 100%;
                         transform: translateY(-50%) translateX(-50%);
 
                         h4{
-                            font-size: 1.5rem;
+                            font-size: 1.6rem;
                             font-weight: bold;
                             opacity: 0;
                             margin-bottom: 0.5rem;
@@ -272,16 +279,28 @@ hr{
                         }
                     }
                     &:hover{
-                        box-shadow: 0 0 30px #9f3647;
-                        transform: scale(1.1);
-                        .imgTendencias {
+                        box-shadow: 0 0 30px #9f3648cd;
+                       transform: scale(0.9);
+                        /*.imgTendencias {
                             filter: blur(5px);
-                        }
+                        }*/
                     }
+                    &:hover .tituloPelicula{
+                        width: 100%;
+                        height: 100%;
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
                     &:hover h4{
+                        width: 100%;
+                        padding: 0.5rem;
                         opacity: 1;
                     }
-                    &:hover::before{
+
+                    /*&:hover::before{
                         content: '';
                         position: absolute;
                         top: 0;
@@ -289,22 +308,24 @@ hr{
                         width: 100%;
                         height: 100%;
                         z-index: 1;
-                    }
+                    }*/
                 }
             }
         } 
         .btnAnterior, .btnSiguiente{
-            background-color: #9f3647;
-                display: inline-block;
-                height: 50px;
-                margin: 20px 10px;
-                padding: 0 20px;
-                border-radius: 0.5rem;
-                font-size: 1.2rem;
-                font-weight: 700;
-                border: 2px solid;
-                text-align: center;
-                transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid white;
+            box-sizing: content-box;
+            margin-top:50px;
+            margin-left:20px;
+            background-color:#9f3647;
+            color: #ffffff;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom:60px;
+            transition: transform 0.3s, box-shadow 0.3s;
                 &:hover{
                     transform: scale(0.95);
                     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -323,7 +344,7 @@ hr{
             margin-bottom: 60px;
             
             .tituloSection{
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 40px;
             }
@@ -360,7 +381,6 @@ hr{
 
 }
 
-/*HEADER VISTA DESDE TABLET / CELULAR*/
 
 @media(max-width: 768px) {
     .main{
@@ -370,7 +390,7 @@ hr{
                 font-size: 2.5rem;
             }
             .segundoTitulo{
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             .btnRegistrarse{
                 padding: 0.8rem 1.5rem;
@@ -416,10 +436,10 @@ hr{
                             }
                         }
                     }
-                    &:hover{
+                    /*&:hover{
                         box-shadow: initial;
                         transform: scale(0.9);
-                    }
+                    }*/
                 }
                 .boton{
                     padding: 0.8rem 0.8rem;
@@ -449,11 +469,12 @@ hr{
 
 /*FOOTER VISTA DESDE ESCRITORIO*/
 .footer{
-    background-color: #9f3647;
+    background-color:#9f3647;
+    color:#ffffff;
     height: 15vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     .navegadorLista{
         list-style: none;
         display: flex;
@@ -463,25 +484,24 @@ hr{
             .linkNav{
                 text-decoration: none;
                 font-weight: 700;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
             .adminPelis{
                 background-color: #181419;
-                border-radius: 0.5rem;
+                color: white;
                 padding: 0.5rem 1rem;
+                border-radius: 5px;
             }
         }
     }
     .flechaArriba{
         position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
         cursor: pointer;
-        bottom: 15px;
-        right: 15px;
     }
 }
-
-
-/*HEADER VISTA DESDE TABLET / CELULAR */
 
 @media(max-width: 768px) {
     .footer{
@@ -512,12 +532,11 @@ hr{
     background-position: center;
     .headerRegister{
         height: 8vh;
-        padding: 3vh;
+        padding: 30px;
         .anclaLogo{
             text-decoration: none;
-            font-weight: 900;
-            font-size: 1rem;
-
+            font-weight: 700;
+            font-size: 1.2rem;
         }
     }
 }
@@ -915,4 +934,128 @@ hr{
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
+}
+
+/*ADMINISTRADOR*/
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-control {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.row .col-12 {
+    flex: 1 1 100%;
+}
+
+.row .col-md-4 {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas con espacio de gap */
+}
+
+.row .col-md-8 {
+    flex: 1 1 calc(66.666% - 20px); /* Dos tercios del ancho */
+}
+
+label {
+    margin-bottom: 0.5rem; /* Espacio entre label y input */
+    font-weight: bold; /* Opcional: hacer que las etiquetas se vean más destacadas */
+}
+
+.agregarPeli {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: auto; /* Esto asegura que el botón esté alineado al fondo */
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%; /* Asegura que todos los inputs de texto y archivo tengan el mismo ancho */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td{
+    width: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+
+}
+
+.table th{
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table-dark tbody tr:hover {
+    background-color: #495057;
+}
+
+.table img{
+    border-radius: 5px;
+}
+
+@media(max-width: 768px){
+    form {
+        flex-direction: column;
+    }
+
+    .btn-succeesss{
+        margin-top: 10px;
+    }
+
+    .container{
+        padding: 15px;
+    }
+
 }
